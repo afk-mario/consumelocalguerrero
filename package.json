@@ -1,0 +1,58 @@
+{
+  "name": "consumelocalguerrero.club",
+  "version": "1.0.0",
+  "description": "Website por consume local guerrero",
+  "main": "index.js",
+  "author": "Afk",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack -p",
+    "lint": "eslint 'src/**/*.js'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css:fix": "stylelint --fix 'src/**/*.css'",
+    "lint:fix": "eslint --fix 'src/**/*.js'",
+    "lint:format": "prettier --write 'src/**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "modern-css-reset": "^1.1.0",
+    "pdfjs-dist": "^2.3.200"
+  }
+}

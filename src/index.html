@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body id="app">
+    <header id="toolbar">
+      <div id="pager" class="wrapper">
+        <button id="nav-first">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
+        </button>
+        <button id="nav-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+        </button>
+
+        <div class="page-info">
+          <span id="page-current">loading</span>
+          <span id="page-count"></span>
+        </div>
+
+        <button id="nav-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </button>
+        <button id="nav-last">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+        </button>
+
+        <a class="button download" href="directorio.pdf" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg>
+        </a>
+
+      </div>
+
+
+    </header>
+    <main class="wrapper">
+      <div id="viewport" class="viewport" role="main">
+    </main>
+      </div>
+  </body>
+</html>

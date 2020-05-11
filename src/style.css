@@ -1,0 +1,111 @@
+:root {
+  --bg-01: #f4f4f4;
+  --bg-02: #fff;
+  --fg: #000;
+  --hl: #fdd000;
+  --font: 'Roboto Mono', sans-serif;
+  --max-width: 700px;
+  --margin-q: calc(var(--margin-01) / 4);
+  --margin-h: calc(var(--margin-01) / 2);
+  --margin-01: 8px;
+  --margin-02: calc(var(--margin-01) * 2);
+  --margin-03: calc(var(--margin-01) * 3);
+  --margin-04: calc(var(--margin-01) * 4);
+  --margin-05: calc(var(--margin-01) * 5);
+  --margin-06: calc(var(--margin-01) * 6);
+  --margin-07: calc(var(--margin-01) * 7);
+  --margin-08: calc(var(--margin-01) * 8);
+  --margin-09: calc(var(--margin-01) * 9);
+  --margin-10: calc(var(--margin-01) * 10);
+}
+
+body {
+  font-family: var(--font);
+}
+
+.button,
+button {
+  border: none;
+  apareance: none;
+  color: var(--fg);
+  text-decoration: none;
+  background: var(--bg-02);
+  border: 2px solid black;
+  padding: var(--margin-h) var(--margin-01);
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button svg:not(:only-child) {
+  margin-right: var(--margin-01);
+}
+
+.button:hover,
+button:hover {
+  background: var(--hl);
+}
+
+#toolbar {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--bg-01);
+}
+
+#toolbar .wrapper {
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: var(--margin-02);
+  padding-bottom: var(--margin-02);
+}
+
+#toolbar .wrapper > *:not(:last-child) {
+  margin-right: var(--margin-01);
+}
+
+#toolbar .download {
+  margin-left: auto;
+}
+
+#pager {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.page-info {
+  background: var(--bg-02);
+  border: 2px solid var(--fg);
+  min-width: 60px;
+  padding: var(--margin-h) var(--margin-01);
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  max-width: 800px;
+  padding-right: var(--margin-01);
+  padding-left: var(--margin-01);
+}
+
+.viewport {
+  display: block;
+  margin-top: var(--margin-02);
+  margin-bottom: var(--margin-02);
+  border: 2px solid black;
+  overflow-x: hidden;
+  min-height: 200px;
+  background: var(--bg-01);
+}
+
+@media screen and (max-width: 900px) {
+}
